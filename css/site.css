@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	margin: 0 auto;
+	font-family: 'Hind', sans-serif;
+}
+
+#wrapper {
+	text-align: center;
+}
+header {
+	height: 1000px;
+	width: 100%;
+	background: url('../images/57th_street.jpg') center top fixed no-repeat;
+	background-size: cover;
+	outline: 2px solid rgba(255,255,255,0.2);
+	outline-offset: -15px;
+}
+
+#branding {
+	margin: 0 auto;
+	color: white;
+	display: inline-block;
+	padding-top: 300px;
+}
+
+#branding h1 {
+	font-size: 64px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	margin-bottom: 25px;
+	border-bottom: 5px solid rgba(255,255,255,0.2);
+	letter-spacing: 4px;
+}
+#branding h2 {
+	font-size: 32px;
+}
+main {
+	margin: 0 auto;
+}
+article {
+	margin: 25px auto;
+	width: 1000px;
+	color: #888;
+	padding: 25px 0 50px 0;
+}
+.article-header {
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 25px;
+}
+.article-title {
+	font-size: 54px;
+	color: #22ABC6;
+}
+.article-subtitle {
+	font-size: 24px;
+}
+.article-body {
+	margin-top: 50px
+}
+article#profile {
+	font-size: 24px;
+}
+article:after, footer:after { /*clearfix*/
+	visibility: hidden;
+	display: block;
+	content: '';
+	clear: both;
+	height: 0;
+}
+#profile .panel {
+	width: 35%;
+	text-align: left;
+	font-size: 16px;
+}
+#profile .panel-title {
+	color: #22ABC6;
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+#profile .panel dt {
+	font-size: 20px;
+	color: #222;
+}
+#profile .about-me {
+	float: left;
+}
+#profile .details {
+	float: right;
+}
+#profile .my-pic {
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	background: url('../images/andrew.jpg') center no-repeat;
+	box-shadow: inset 0px 0 20px green;
+	position: relative;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+footer {
+	color: white;
+	background-color: #434242;
+	padding: 50px 0;
+	width: 100%;
+}
+.footer-title {
+	font-size: 54px;
+	margin-bottom: 50px;
+}
+footer dl {
+	font-size: 32px;
+	height: 100px;
+}
+.footer-body {
+	margin: 0 auto;
+	width: 800px;
+}
+.footer-body a {
+	padding: 5px 10px;
+}
+.footer-body a:hover {
+	background-color: #555;
+}
+.footer-body a:nth-child(odd) {
+	float: left;
+}
+.footer-body a:nth-child(even) {
+	float: right;
+}
+footer dt {
+	float: right;
+	line-height: 100px;
+	margin-left: 25px;
+	color: #fff;
+}
+footer dd {
+	float: left;
+}
+@media only screen and (max-width : 500px) {
+	body {
+		margin-top: 25px;
+	}
+	header {
+		background: none;
+		height: 200px;
+		margin-bottom: 0;
+	}
+	#branding {
+		color: black;
+		padding: 25px 0 25px;
+		border-bottom: 2px solid #888;
+	}
+	#branding h1 {
+		line-height: 75px;
+		letter-spacing: 1px;
+	}
+	#profile .details {
+		float: left;
+		clear: both;
+	}
+	#profile .panel {
+		width: 100%;
+		margin: 25px 0;
+	}
+	article {
+		margin: 100px auto 50px;
+		width: 300px;
+		color: #888;
+		padding: 25px 0 25px 0;
+		padding: 0 10px;
+	}
+	.article-header {
+		display: none;
+	}
+	#profile .my-pic {
+		display: none;
+	}
+	.footer-body a:nth-child(odd),
+	.footer-body a:nth-child(even) {
+		float: left;
+		clear: both;
+		padding-left: 50px;
+
+	}
+	.footer-body a:hover {
+		background-color: transparent;
+	}
+}
+
+}
+
+
