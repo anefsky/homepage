@@ -1,47 +1,39 @@
-<html>
-
+<html ng-app="myApp">
 <head>
 	<title>Andrew Nefsky</title>
 	<link href='http://fonts.googleapis.com/css?family=Hind:400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/site.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone.js"></script>
-
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<body>
+<body ng-controller="myCntl">
 	<div id='wrapper'>
 		<header>
-			<section id='branding'>			
+			<section id='branding'>	
+				<h1>{{ person.name }}</h1>
+				<h2>{{ person.jobTitle }}</h2>		
 			</section>
 		</header>
 		<main>
 			<article id='profile'>
 				<div class='article-header'>
 					<p class='article-title'>Profile</p>
-					<p class='article-subtitle'>I'm a front-end and full-stack engineer</p>
+					<p class='article-subtitle'>{{ person.profileSubtitle }}</p>
 				</div>
 				<div class ='article-body'>
 					<div class='about-me panel'>
 						<p class='panel-title'>About me</p>
-						<p>I specialize in object-oriented javascript and applying MVC solutions for web applications.  Also experienced with css, I can provide comprehensive single-page app and widget development.  For smaller projects, I can build complete full-stack solutions using various backend languages and databases.
-						</p>
+						<p>{{ person.aboutMe }}</p>
 					</div>
-
 					<div class='details panel'>
 						<p class='panel-title'>Details</p>
 						<dl>
 							<dt>Name:</dt>
-							<dd>Andrew Nefsky</dd>
+							<dd>{{ person.name }}</dd>
 							<dt>Location:</dt>
-							<dd>New York City</dd>
+							<dd>{{ person.location }}</dd>
 							<dt>Skills:</dt>
-							<dd>javascript, html, css, java, php, sql</dd>
+							<dd>{{ person.skills.join(', ') }}</dd>
 						</dl>
 					</div>
 					<div class="my-pic">
@@ -49,37 +41,23 @@
 				</div>
 			</article>
 			<footer>
-
 				<div class='footer-header'>
 					<p class='footer-title'>Contact</p>
 				</div>
 				<div class='footer-body'>
-					<a href='https://www.linkedin.com/pub/andrew-nefsky/15/48b/910'>
+					<a ng-repeat='link in person.contactLinks' href='{{ link.url }}'>
 						<dl>
-							<dt>linkedin</dt>
-							<dd><img src='images/linkedin-logo.gif'</dd>
-						</dl>
-					</a>
-					<a href='https://www.facebook.com/anefsky'>
-						<dl>
-							<dt>facebook</dt>
-							<dd><img src='images/facebook-logo.png'</dd>
+							<dt>{{ link.title }}</dt>
+							<dd><img ng-src="{{ link.image }}"></dd>
 						</dl>
 					</a>
 				</div>
-
 			</footer>
 		</main>
 	</div>
-
 </body>
-
 </html>
 <script src='js/site.js'></script>
-<script id='test-template' type='text/template'>
-	// <h1><%= who %></h1>
-	// <h2><%= what %></h2>
-	<p>helloooo</p>
-</script>
+
 
 

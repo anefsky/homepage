@@ -17,7 +17,7 @@ body {
 header {
 	height: 1000px;
 	width: 100%;
-	background: url('../images/57th_street.jpg') center top fixed no-repeat;
+	background-position: center top fixed;
 	background-size: cover;
 	outline: 2px solid rgba(255,255,255,0.2);
 	outline-offset: -15px;
@@ -98,7 +98,9 @@ article:after, footer:after { /*clearfix*/
 	height: 200px;
 	width: 200px;
 	border-radius: 100px;
-	background: url('../images/andrew.jpg') center no-repeat;
+	background-position: center;
+	background-repeat: no-repeat;
+
 	box-shadow: inset 0px 0 20px green;
 	position: relative;
 	top: 0px;
@@ -150,7 +152,7 @@ footer dd {
 		margin-top: 25px;
 	}
 	header {
-		background: none;
+		background: none !important;
 		height: 200px;
 		margin-bottom: 0;
 	}
