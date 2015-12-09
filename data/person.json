@@ -1,0 +1,31 @@
+{
+	"person" : {
+		"name" : "Andrew Nefsky",
+		"jobTitle" : "front end developer",
+		"location" : "New York City",
+		"skills" : [
+			"javascript",
+			"html",
+			"css",
+			"java",
+			"php",
+			"sql"
+		],
+		"personImage" : "images/andrew.jpg",
+		"heroImage" : "images/57th_street.jpg",
+		"aboutMe" : "I specialize in object-oriented javascript and applying MVC solutions for web applications.  Also experienced with css, I can provide comprehensive single-page app and widget development.  For smaller projects, I can build complete full-stack solutions using various backend languages and databases.",
+		"profileSubtitle" : "I'm a front-end and full-stack engineer",
+		"contactLinks" : [ 
+			{
+				"title" : "linkedin",
+				"url" : "https://www.linkedin.com/pub/andrew-nefsky/15/48b/910",
+				"image" : "images/linkedin-logo.gif"
+			},
+			{
+				"title" : "facebook",
+				"url" : "https://www.facebook.com/anefsky",
+				"image" : "images/facebook-logo.png"
+			}
+		]
+	}
+}
